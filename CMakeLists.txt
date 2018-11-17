@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8)
 
 project(ROBOTICSCAPE)
 
-set(FUSION_DIR Fusion)
+set(FUSION_DIR Fusion/)
 
 include_directories(
 	${FUSION_DIR}
