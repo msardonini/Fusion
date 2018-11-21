@@ -18,3 +18,7 @@ set(FUSION_SRCS
 
 add_library(Fusion SHARED ${FUSION_SRCS})
 target_include_directories(Fusion PUBLIC ${FUSION_DIR})
+
+install(TARGETS Fusion
+	DESTINATION /usr/lib
+	)
