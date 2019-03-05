@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8)
 
 project(ROBOTICSCAPE)
 
-set(FUSION_DIR lib/Fusion/Fusion/)
+set(FUSION_DIR Fusion/)
 
 include_directories(
 	${FUSION_DIR}
@@ -16,4 +16,9 @@ set(FUSION_SRCS
 )
 
 
-add_library(Fusion SHARED ${FUSION_SRCS})
+add_library(Fusion STATIC ${FUSION_SRCS})
+target_include_directories(Fusion PUBLIC ${FUSION_DIR})
+
+install(TARGETS Fusion
+	DESTINATION /usr/lib
+	)
